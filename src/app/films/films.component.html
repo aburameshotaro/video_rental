@@ -1,0 +1,34 @@
+<div class="container-body" >
+  <div class='card'>
+    <table>
+            <thead>
+                <tr>
+                    <th class="textTableHead"> Lp</th>
+                    <th class="textTableHead"> Tytuł filmu</th>
+                    <th class="textTableHead"> Gatunek</th>
+                    <th class="textTableHead"> Reżyser</th>
+                    <th class="textTableHead"> Czas trwania</th>
+                    <th class="textTableHead"> Wypożycz</th>
+                    <th class="textTableHead"> Edytuj</th>
+                    <th class="textTableHead"> Usuń</th>
+                </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor=" let film of filmsList; let i = index">
+                    <tr>
+                      <td class="textTable2">{{i+1}}</td>
+                      <td class="textTable2" (click)="showFullDescription(film)">{{film.title}}</td>
+                      <td class="textTable2">{{film.genre}}</td>
+                      <td class="textTable2">{{film.director}}</td>
+                      <td class="textTable2">{{film.length}}</td>
+                      <td class="textTable"><button class="buttonTable" (click)="rentFilm(film)"> Wypożycz</button> </td>
+                      <td class="textTable"><button class="buttonTable" (click)="editFilm(film)"> Edytuj</button> </td>
+                      <td class="textTable"><button class="buttonTable" (click)="deleteFilm(film)"> Usuń</button> </td>
+                    </tr>
+              </ng-container>
+                
+            </tbody>
+    </table>
+  </div>
+  <button class="textForm textFormButton floating-btn" (click)="addFilm()">Dodaj film</button>
+</div>

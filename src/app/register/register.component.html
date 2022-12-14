@@ -1,0 +1,41 @@
+<div class="container-body">
+    <div class="card">
+        <h1>Rejestracja</h1>
+        <form>
+            <div class="form">
+                <label for='first_name'  class='textForm'>Imię:</label>
+                <input  class='textForm'type='text' id = 'first_name' [(ngModel)]="user.first_name" name="first_name">
+                <br>
+                <label for='last_name'  class='textForm'>Nazwisko:</label>
+                <input  class='textForm'type='text' id = 'last_name' [(ngModel)]="user.last_name" name="last_name">
+                <br>
+                <label for='password' class='textForm'>Hasło:</label>
+                <input class='textForm'type='password' id='password' [(ngModel)]="user.password" name="password">
+                <br>
+                <label for='phone_number' class='textForm'>Telefon:</label>
+                <input  class='textForm'type='text' id = 'phone_number' [(ngModel)]="user.phone_number" name="phone_number">
+                <br>
+                <label for='street_name' class='textForm'>Ulica:</label>
+                <input  class='textForm'type='text' id = 'street_name' [(ngModel)]="user.street_name" name="street_name">
+                <br>
+                <label for='street_number' class='textForm'>Numer domu:</label>
+                <input  class='textForm'type='text' id = 'street_number' [(ngModel)]="user.street_number" name="street_number">
+                <br>
+                <label for='flat_number' class='textForm'>Numer mieszkania:</label>
+                <input  class='textForm'type='text' id = 'flat_number' [(ngModel)]="user.flat_number" name="flat_number">
+                <br>
+                <label for='city' class='textForm'>Miasto:</label>
+                <input  class='textForm'type='text' id = 'city' [(ngModel)]="user.city" name="city">
+                <br>
+                <label for='postcode' class='textForm'>Kod pocztowy:</label>
+                <input  class='textForm'type='text' id = 'postcode' [(ngModel)]="user.postcode" name="postcode">
+                <br>
+                <button type="submit" class='textForm textFormButton' (click)="submit()">Zarejestruj</button>
+            </div> 
+        </form>
+        <a routerLink="register" [routerLinkActive]="['is-active']">
+            Nie masz konta? Zarejestruj się!
+        </a>
+       
+    </div>
+</div>

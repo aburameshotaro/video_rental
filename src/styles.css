@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #8c38ff;
+    --light: #FFFFFF;
+    --dark: #212121;
+    --darkligth: #a08d8d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Pro', serif;
+}
+
+
+
+.container{
+    max-width: 1280px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size:28px;
+    letter-spacing: 3px;
+    color: var(--dark);
+    text-transform: uppercase;
+    
+}
+
+.navComp {
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    background-color: var(--light);
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.navComp.is-active,  .navComp:hover{
+    transition: 0.4s;
+    background-color: var(--primary);
+}
+
+
+.textTableHead{
+    text-align: center;
+    font-weight: 800;
+    font-size:16px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    background-color: var(--darkligth);
+    text-transform: uppercase;
+}
+
+button:hover{
+    transition: 0.4s;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
+
+table{
+    border-radius: 5px;
+    margin:5px;
+    padding:10px;
+    background-color:var(--light);
+}
+
+.buttonTable{
+    font-weight: 500;
+    font-size:14px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.textTableHead{
+    text-align: center;
+    font-weight: 800;
+    font-size:16px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    background-color: var(--darkligth);
+    text-transform: uppercase;
+}
+
+.textTable2{
+    font-weight: 500;
+    font-size:14px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+}
+
+th{
+    padding: 5px;
+    margin: 5px;
+}
+
+td{
+    border: 1px solid black;
+}
+
+.container-body{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    position: relative;
+    background-color: var(--darkligth);
+    width: auto;
+    margin: 20px;
+    padding: 10px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-btn {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25);
+    position:fixed;
+    width:50%;
+    border-color: rgb(107, 106, 106);
+    bottom: 20px;
+
+    cursor: pointer
+  }

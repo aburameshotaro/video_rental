@@ -1,0 +1,40 @@
+<div class="modal-header m-0 pt-2 pl-2 pb-0">
+    <h4  id="modal-basic-title">{{film.title}}</h4>
+    
+      <button (click)="closeModal()" style="cursor: pointer;">close</button>
+    
+  </div>
+  <div class="modal-body p-0 m-0">
+    <table class="p-0 m-0">
+      <thead>
+          
+      </thead>
+      <tbody>
+        <tr>
+            <th class="textTableHead col-sm">Gatunek</th>
+            <th class="textTable2">{{film.genre}}</th>
+        </tr>
+        <tr>
+          <th class="textTableHead col-sm">Reżyser</th>
+          <th class="textTable2">{{film.director}}</th>
+        </tr>
+        <tr>
+          <th class="textTableHead col-sm">Czas trwania</th>
+          <th class="textTable2">{{film.length}}</th>
+        </tr>
+        <tr>
+          <th class="textTableHead col-sm">Ocena</th>
+          <th class="textTable2">{{film.rating}}</th>
+        </tr>
+        <tr>
+          <th class="textTableHead col-sm">Krótki opis filmu</th>
+          <th class="textTable2">{{film.short_description}}</th>
+        </tr>
+        <tr>
+          <th class="textTableHead col-sm">Aktorzy</th>
+          <th class="textTable2">{{film.actors}}</th>
+        </tr>
+      </tbody>
+      </table>
+
+  </div>

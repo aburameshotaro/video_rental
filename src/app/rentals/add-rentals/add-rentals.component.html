@@ -1,0 +1,38 @@
+<div class="modal-header m-0 pt-2 pl-2 pb-0">
+    <h4  id="modal-basic-title">Wypożycz film</h4>
+    
+      <button (click)="closeModal()" style="cursor: pointer;">close</button>
+    
+  </div>
+  <div class="modal-body p-0 m-0">
+    <table class="p-0 m-0">
+      <thead>
+            <tr>
+              <th class="textTableHead col-sm">Imię</th>
+              <th class="textTableHead col-sm">Nazwisko</th>
+              <th class="textTableHead col-sm">Tytuł filmu</th>
+              <th class="textTableHead col-sm">Dodaj</th>
+            </tr>
+      </thead>
+      <tbody>
+            <tr>
+                <td class="textTable2">   
+                    <input type="text" class="textTable2" [(ngModel)]="rental.first_name">
+                </td>
+                <td class="textTable2">   
+                    <input type="text" class="textTable2" [(ngModel)]="rental.last_name">
+                </td>
+                <td class="textTable2">
+                <input type="text" class="textTable2" [(ngModel)]="rental.title">
+                </td>
+                <td class="textTable2">
+                  <button (click)="addRental()" class="buttonTable">
+                      Dodaj
+                  </button>
+              </td>
+            </tr>
+
+      </tbody>
+      </table>
+
+  </div>

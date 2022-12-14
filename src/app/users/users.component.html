@@ -1,0 +1,35 @@
+<div class="container-body" >
+    <div class='card'>
+        <table>
+            <thead>
+                <tr>
+                    <th class="textTableHead"> Imię</th>
+                    <th class="textTableHead"> Nazwisko</th>
+                    <th class="textTableHead"> Adres</th>
+                    <th class="textTableHead"> Telefon</th>
+                    <th class="textTableHead"> Data rejestracji</th>
+                    <th class="textTableHead"> Edycja</th>
+                    <th class="textTableHead"> Usuń</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor=" let user of usersList; let i = index">
+                    <tr>
+                      <td class="textTable2">{{user.first_name}}</td>
+                      <td class="textTable2">{{user.last_name}}</td>
+                      <td class="textTable2">{{user.adress}}</td>
+                      <td class="textTable2">{{user.phone_number}}</td>
+                      <td class="textTable2">{{user.date_added}}</td>
+                      <td class="textTable"><button class="buttonTable" (click)="open(user)"> Edytuj</button> </td>
+                      <td class="textTable"><button class="buttonTable" (click)="deleteUser(user)">Usuń</button> </td>
+                    </tr>
+              </ng-container>
+                
+            </tbody>
+            </table>
+    </div>
+    <button class="textForm textFormButton floating-btn" (click)="addUser()">Dodaj użytkownika</button>
+    </div>
+    
+    

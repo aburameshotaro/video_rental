@@ -1,0 +1,29 @@
+.menu {
+    margin:0 -16px
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size:20px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+a.is-active,  a:hover{
+    text-decoration: none;
+    transition: 0.4s;
+    background-color: var(--primary);
+}
+
+nav {
+    background-color: var(--light);
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 99;
+}

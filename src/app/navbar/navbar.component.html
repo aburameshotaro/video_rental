@@ -1,0 +1,22 @@
+<nav>
+
+    <div class='container'>
+      <h1>Video Rental</h1>
+      <div class='menu'>
+        
+        <a routerLink="films"  [routerLinkActive]="['is-active']"> 
+            Filmy
+        </a>
+        <a routerLink="rentals" [routerLinkActive]="['is-active']">
+            Wypożyczenia 
+        </a>
+        
+        <a *ngIf="adminPrivilages" routerLink="users" [routerLinkActive]="['is-active']">
+            Użytkownicy 
+        </a>
+
+         <a routerLink="" (click)="logout()">Wyloguj</a>
+      </div>
+     
+    </div>
+  </nav>

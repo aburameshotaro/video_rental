@@ -1,0 +1,62 @@
+<div class="modal-header m-0 pt-2 pl-2 pb-0">
+    <h4  id="modal-basic-title">{{modalTitle}}</h4>
+    
+      <button (click)="closeModal()" style="cursor: pointer;">close</button>
+    
+  </div>
+  <div class="modal-body p-0 m-0">
+    <table class="p-0 m-0">
+      <thead>
+          <tr>
+              <th class="textTableHead col-sm">Tytuł filmu</th>
+              <th class="textTableHead col-sm">Gatunek</th>
+              <th class="textTableHead col-sm">Reżyser</th>
+              <th class="textTableHead col-sm">Czas trwania</th>
+              <th class="textTableHead col-sm">Ocena</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td class="textTable2">   
+                <input type="text" class="textTable2" [(ngModel)]="film.title">
+            </td>
+            <td class="textTable2">   
+                <input type="text" class="textTable2" [(ngModel)]="film.genre">
+            </td>
+            <td class="textTable2">
+              <input type="text" class="textTable2" [(ngModel)]="film.director">
+            </td>
+            <td class="textTable2">
+                <input type="text" class="textTable2" [(ngModel)]="film.length">
+            </td>
+            <td class="textTable2">
+                <input type="text" class="textTable2" [(ngModel)]="film.rating">
+            </td>
+            
+          </tr>
+         <tr>
+            
+              <th class="textTableHead col-sm">Krótki opis filmu</th>
+              <th class="textTableHead col-sm">Aktorzy</th>
+              <th class="textTableHead col-sm">Aktualizuj</th>
+            
+         </tr>
+         <tr>
+            
+            <td class="textTable2">
+                <input type="text" class="textTable2" [(ngModel)]="film.short_description">
+            </td>
+            <td class="textTable2">
+                <input type="text" class="textTable2" [(ngModel)]="film.actors">
+            </td>
+            <td class="textTable2">
+                <button (click)="updateFilm()" class="buttonTable">
+                    Aktualizuj
+                </button>
+            </td>
+         </tr>
+
+      </tbody>
+      </table>
+
+  </div>

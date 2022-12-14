@@ -1,0 +1,30 @@
+<div class="container-body" >
+    <div class='card'>
+        <table>
+            <thead>
+                <tr>
+                    <th class="textTableHead"> Klient</th>
+                    <th class="textTableHead"> Tytuł filmu</th>
+                    <th class="textTableHead"> Data wypożyczenia</th>
+                    <th class="textTableHead"> Data planowanego zwrotu</th>
+                    <th class="textTableHead"> Data faktycznego zwrotu</th>
+                    <th class="textTableHead"> Zwróć</th>
+                </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor=" let rental of rentalsList; let i = index">
+                    <tr>
+                      <td class="textTable2">{{rental.client}}</td>
+                      <td class="textTable2">{{rental.film}}</td>
+                      <td class="textTable2">{{rental.date_added}}</td>
+                      <td class="textTable2">{{rental.supposed_return}}</td>
+                      <td class="textTable2">{{rental.real_return}}</td>
+                      <td class="textTable"><button class="buttonTable" (click)="returnFilm(rental)"> Zwróć</button> </td>
+                    </tr>
+              </ng-container>
+                
+            </tbody>
+            </table>
+    </div>
+    <button class="textForm textFormButton floating-btn" (click)="addRental()">Wypożycz film</button>
+    </div>

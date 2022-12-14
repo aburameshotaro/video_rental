@@ -1,0 +1,18 @@
+<div class="container-body">
+    <div class="card">
+        <form>
+            <div class="form">
+                <label for='display_name'  class='textForm'>Imię i nazwisko:</label>
+                <input  class='textForm'type='text' id = 'login' [(ngModel)]="display_name" name="login">
+                <label for='password' class='textForm'>Hasło:</label>
+                <input class='textForm'type='password' id='password' [(ngModel)]="password" name="password">
+                <br>
+                <button type="submit" class='textForm textFormButton' (click)="submit()">Zaloguj</button>
+            </div> 
+        </form>
+        <a routerLink="register" [routerLinkActive]="['is-active']">
+            Nie masz konta? Zarejestruj się!
+        </a>
+       
+    </div>
+</div>
